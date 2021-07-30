@@ -5,6 +5,7 @@ END='\033[0m' # ${END}
 # get the argument message
 message="$1"
 
+yarn p
 
 # Use current date time in the commit message when its not passed
 if [[ -z "${message// }" ]]

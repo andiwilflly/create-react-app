@@ -19,7 +19,13 @@ module.exports = {
                 return cssLoaderOptions;
             }
         },
-        postcss: {}
+        postcss: {
+            plugins: [
+                require("postcss-cssnext"), // https://cssnext.github.io/features/
+                require("autoprefixer"),
+                require("postcss-sprites")
+            ]
+        }
     },
     typescript: {},
     webpack: {
