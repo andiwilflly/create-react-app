@@ -6,6 +6,7 @@ END='\033[0m' # ${END}
 message="$1"
 
 yarn p
+echo "${GREEN} SUCCESS ${END} Prettier finished ${END}"
 
 # Use current date time in the commit message when its not passed
 if [[ -z "${message// }" ]]
