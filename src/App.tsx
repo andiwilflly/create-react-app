@@ -1,7 +1,9 @@
 import React from "react";
+// Components
+import Router from "@components/@router/Router.component";
 
 function App() {
-    return <div>APP {process.env.REACT_APP_NOT_SECRET_CODE}</div>;
+    return <Router />;
 }
 
 export default App;
