@@ -19,7 +19,8 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "commit": "./sh/commit.script.sh",
+
+        "c": "./sh/commit.script.sh",
         "p": "yarn prettier --write ."
     },
     "eslintConfig": {
