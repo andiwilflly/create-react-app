@@ -5,17 +5,19 @@
     "dependencies": {
         "@craco/craco": "^6.2.0",
         "@reach/router": "^1.3.4",
+        "axios": "^0.21.1",
         "path": "^0.12.7",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-scripts": "4.0.3",
+        "react-toastify": "^7.0.4",
         "typescript": "^4.1.2",
         "web-vitals": "^1.0.1"
     },
     "scripts": {
         "b": "craco build",
-        "s": "craco start",
-        "d": "craco start",
+        "s": "yarn p && craco start",
+        "d": "yarn p && craco start",
         "c": "./sh/commit.script.sh",
         "p": "yarn prettier --write ."
     },
