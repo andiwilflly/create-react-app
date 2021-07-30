@@ -5,7 +5,7 @@ import HomePage from "@components/pages/HomePage.component";
 import OtherPage from "@components/pages/OtherPage.component";
 import Page404 from "@components/pages/Page404.component";
 
-export default () => {
+export default function RouterComponent() {
     return (
         <Router>
             <Layout path="/">
@@ -15,4 +15,4 @@ export default () => {
             </Layout>
         </Router>
     );
-};
+}
