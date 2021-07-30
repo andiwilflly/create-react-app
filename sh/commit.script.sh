@@ -6,32 +6,26 @@ END='\033[0m' # ${END}
 message="$1"
 
 
-{ # try
-
-    # Use current date time in the commit message when its not passed
-  if [[ -z "${message// }" ]]
-      then
-          echo "${RED} No commit message provided ${END}"
-          exit 1
-  fi
+# Use current date time in the commit message when its not passed
+if [[ -z "${message// }" ]]
+    then
+        echo "${RED} No commit message provided ${END}"
+        exit 1
+fi
 
 
-  # stage all changes
-  git add .
-  echo "${GREEN} Staged all files ${END}"
-
-  # add commit
-  git commit -m "$message"
-  echo "${GREEN} Added the commit with message: '$message' ${END}"
-
-  # get current branch and push
-  current_branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-  git push origin "$current_branch"
-  echo "${GREEN} Push changes to '$current_branch' branch ${END}"
+# stage all changes
+git add .
+echo "${GREEN} Staged all files ${END}"
 
 
-} || { # catch
-    echo "${RED} Error ${END}"
-}
+# add commit
+git commit -m "$message"
+echo "${GREEN} Added the commit with message: '$message' ${END}"
 
+
+# get current branch and push
+current_branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+git push origin "$current_branch"
+echo "${GREEN} Push changes to '$current_branch' branch ${END}"
 
