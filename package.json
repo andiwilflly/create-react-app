@@ -43,6 +43,7 @@
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "autoprefixer": "9.0.0",
+        "mini-css-extract-plugin": "^2.1.0",
         "postcss": "^8.1.7",
         "postcss-cssnext": "^3.1.0",
         "postcss-sprites": "^4.2.1",

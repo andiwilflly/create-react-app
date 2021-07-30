@@ -6,28 +6,18 @@ const {
     ESLINT_MODES,
     POSTCSS_MODES
 } = require("@craco/craco");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
     style: {
-        modules: {
-            localIdentName: ""
-        },
-        css: {
-            /* Any css-loader configuration options: https://github.com/webpack-contrib/css-loader. */
-            loaderOptions: (cssLoaderOptions, { env, paths }) => {
-                return cssLoaderOptions;
-            }
-        },
         postcss: {
             plugins: [
                 require("postcss-cssnext"), // https://cssnext.github.io/features/
-                require("autoprefixer"),
                 require("postcss-sprites")
             ]
         }
     },
-    typescript: {},
     webpack: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
@@ -36,7 +26,7 @@ module.exports = {
             "@components": path.resolve(__dirname, "./src/components")
         },
         plugins: {
-            add: [] /* An array of plugins */,
+            add: [],
             remove: [] /* An array of plugin constructor's names (i.e. "StyleLintPlugin", "ESLintWebpackPlugin" ) */
         },
         /* Any webpack configuration options: https://webpack.js.org/configuration */
