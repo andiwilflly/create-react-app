@@ -9,23 +9,23 @@ message="$1"
 # Use current date time in the commit message when its not passed
 if [[ -z "${message// }" ]]
     then
-        echo "${RED} No commit message provided ${END}"
+        echo "${RED} error ${END} No commit message provided "
         exit 1
 fi
 
 
 # stage all changes
 git add .
-echo "${GREEN} Staged all files ${END}"
+echo "${GREEN} success ${END} Staged all files ${END}"
 
 
 # add commit
 git commit -m "$message"
-echo "${GREEN} Added the commit with message: '$message' ${END}"
+echo "${GREEN} success ${END} Added the commit with message: '$message'"
 
 
 # get current branch and push
 current_branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 git push origin "$current_branch"
-echo "${GREEN} Push changes to '$current_branch' branch ${END}"
+echo "${GREEN} success ${END} Push changes to '$current_branch' branch ${END}"
 
