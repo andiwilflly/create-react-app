@@ -1,6 +1,8 @@
 import React from "react";
 
-class Page404 extends React.Component<any, any> {
+type TProps = {};
+
+class Page404 extends React.Component<TProps> {
     render() {
         return <div>404</div>;
     }

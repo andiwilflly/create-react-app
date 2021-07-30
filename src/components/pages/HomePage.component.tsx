@@ -1,6 +1,8 @@
 import React from "react";
 
-class HomePage extends React.Component<any, any> {
+type TProps = {};
+
+class HomePage extends React.Component<TProps> {
     render() {
         return <div>HomePage</div>;
     }

@@ -1,6 +1,8 @@
 import React from "react";
 
-class OtherPage extends React.Component<any, any> {
+type TProps = {};
+
+class OtherPage extends React.Component<TProps> {
     render() {
         return <div>OtherPage</div>;
     }
