@@ -1,6 +1,11 @@
-RED='\033[0;31m' # ${RED}
-GREEN='\033[0;32m' # ${GREEN}
-END='\033[0m' # ${END}
+# ----------------------
+# Color Variables
+# ----------------------
+RED = "\033[0;31m"
+YELLOW = '\033[1;33m'
+GREEN = '\033[1;32m'
+LCYAN = '\033[1;36m'
+END = '\033[0m' # ${END}
 
 # get the argument message
 message="$1"

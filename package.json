@@ -16,21 +16,17 @@
         "react-i18next": "^11.11.4",
         "react-scripts": "4.0.3",
         "react-toastify": "^7.0.4",
-        "typescript": "^4.1.2",
-        "web-vitals": "^1.0.1"
+        "typescript": "^4.3.5",
+        "web-vitals": "^2.1.0"
     },
     "scripts": {
+        "unused": "npx depcheck",
+        "update": "ncu -u",
         "b": "craco build",
         "s": "yarn p && craco start",
         "d": "yarn p && craco start",
         "c": "./sh/commit.script.sh",
         "p": "yarn prettier --write ."
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
     },
     "browserslist": {
         "production": [
@@ -54,6 +50,6 @@
         "postcss": "^8.1.7",
         "postcss-cssnext": "^3.1.0",
         "postcss-sprites": "^4.2.1",
-        "prettier": "2.3.2"
+        "prettier": "^2.3.2"
     }
 }
