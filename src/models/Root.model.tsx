@@ -1,12 +1,11 @@
 import { types } from "mobx-state-tree";
+import { IActions } from "@/@types/types";
 // Models
 import CoreModel from "@models/Core.model";
 
-const RootModel = {};
-
-interface IActions<Type> {
-    [key: string]: () => Type;
-}
+const RootModel = {
+    test: types.number
+};
 
 const actions = (self): IActions<void> => {
     return {
@@ -19,11 +18,11 @@ const actions = (self): IActions<void> => {
     };
 };
 
-const views = (self) => {
+const views = (self): IActions<void> => {
     return {};
 };
 
-const volatile = (self) => {
+const volatile = (self): IActions<void> => {
     return {};
 };
 
