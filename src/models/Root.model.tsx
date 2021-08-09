@@ -8,14 +8,7 @@ const RootModel = {
 };
 
 const actions = (self): IActions<void> => {
-    return {
-        update(newFields = {}) {
-            Object.keys(self).forEach((fieldName) => {
-                if (newFields[fieldName] !== undefined)
-                    self[fieldName] = newFields[fieldName];
-            });
-        }
-    };
+    return {};
 };
 
 const views = (self): IActions<void> => {
